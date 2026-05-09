@@ -1,8 +1,8 @@
 function sendMessage(){
     const userInput = document.getElementById("userInput");
-    godown()
     createchatmessage(userInput.value,"user");
     userInput.value="";
+    // godown();
 }
 
 function createchatmessage(message,sender){
@@ -35,5 +35,8 @@ function chatBotResponse(message){
 
 function godown(){
     const container = document.querySelector(".chatMessage");
-    container.scrollTop = container.scrollHeight;
+    container.scrollTo({
+        top: container.scrollHeight,
+        behavior: "smooth"
+    });
 }
