@@ -10,7 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 
 const OLLAMA_API = 'http://localhost:11434/api/generate';
 
-// API endpoint for chat
 app.post('/api/chat', async (req, res) => {
     const { message, model } = req.body;
 

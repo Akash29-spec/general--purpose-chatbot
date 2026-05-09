@@ -3,7 +3,6 @@ function sendMessage(){
     createchatmessage(userInput.value,"user");
     chatBotResponse(userInput.value);
     userInput.value="";
-    godown();
 }
 
 function createchatmessage(message,sender){
@@ -26,7 +25,9 @@ function chatBotResponse(message){
     
     .then(response => response.json())
     .then(data => {
+        
         createchatmessage(data.reply, "bot");
+        godown();
     })
     .catch(error => {
         console.error("Error:", error);
