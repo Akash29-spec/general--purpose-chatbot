@@ -12,7 +12,6 @@ const OLLAMA_API = 'http://localhost:11434/api/generate';
 
 // API endpoint for chat
 app.post('/api/chat', async (req, res) => {
-    console.log(req.body);
     const { message, model } = req.body;
 
     

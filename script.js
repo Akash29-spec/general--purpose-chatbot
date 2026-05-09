@@ -1,8 +1,9 @@
 function sendMessage(){
     const userInput = document.getElementById("userInput");
     createchatmessage(userInput.value,"user");
+    chatBotResponse(userInput.value);
     userInput.value="";
-    // godown();
+    godown();
 }
 
 function createchatmessage(message,sender){
@@ -19,10 +20,9 @@ function createchatmessage(message,sender){
     chatmassage.appendChild(senderimg);
     const container =document.querySelector(".chatMessage");
     container.appendChild(chatmassage);
-    chatBotResponse(message);
 }
 function chatBotResponse(message){
-    fetch("http://localhost:5000/api/chat")
+    fetch("http://localhost:5000/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message})})
     
     .then(response => response.json())
     .then(data => {
