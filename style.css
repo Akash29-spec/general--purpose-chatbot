@@ -1,13 +1,13 @@
 .container{
     width:70%;
     margin:auto;
-    background-color:#989595;
+    
     
 }
 
 .chatInput{
-    position:fixed;
-    width:70%;
+    position:sticky;
+    top:10px;
     padding:10px 5px;
     z-index:0;
 }
@@ -16,7 +16,6 @@
     padding:10px 15px; ;
     font-size:16px;
     border-radius:10px;
-    border:none:
 }
 #sendbtn{
     padding:10px 15px;
@@ -33,22 +32,24 @@
 }
 .chatmessage{
     display:flex;
-    
     justify-content:flex-start;
     align-items:center;
+    padding:10px 15px;
 
 }
 .logo{
-    padding:10px 15px;
+    padding:10px 10px;
     width: 30px;
     height: 30px;
 }
 .message{
-    display:inline-block;
+    display:inline;
     background-color:#f1f1f1;
     padding:10px 15px;
-    margin:10px;
     padding:10px 15px;
     border-radius:10px;
 
+}
+.user{
+    justify-content:flex-end;
 }
